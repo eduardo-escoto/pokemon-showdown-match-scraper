@@ -1,12 +1,13 @@
-from requests import get, Response
 from typing import Callable, Optional
+
+from requests import Response, get
 
 
 class ShowdownRequest:
-    request_uri:str
+    request_uri: str
     execute: Callable
 
-    def __init__(self, uri:str, request: Callable[[Optional[dict]], Response]):
+    def __init__(self, uri: str, request: Callable[[Optional[dict]], Response]):
         self.request_uri = uri
         self.execute = request
 
