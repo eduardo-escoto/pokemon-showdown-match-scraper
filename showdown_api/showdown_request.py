@@ -12,8 +12,10 @@ class ShowdownRequest:
         self.execute = request
 
     @staticmethod
-    def showdown_request_factory(path: str, subdomain: str = None) -> Response:
-        query_uri = f"https://{f'{subdomain}.' if subdomain else ''}pokemonshowdown.com{path}.json"
+    def showdown_request_factory(
+        path: str, subdomain: str = None, file_ext: str = None, **kwargs
+    ) -> Response:
+        query_uri = f"https://{f'{subdomain}.' if subdomain else ''}pokemonshowdown.com{path}.{file_ext if file_ext else 'json'}"
 
         def get_request(options: dict = None) -> Response:
             return get(query_uri, params=options)
