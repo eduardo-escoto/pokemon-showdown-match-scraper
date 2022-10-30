@@ -6,11 +6,16 @@ pokedex_data_paths = {
     "pokemon": {"path": "/data/pokedex", "subdomain": "play", "file_ext": "json"},
     "moves": {"path": "/data/moves", "subdomain": "play", "file_ext": "json"},
     "items": {"path": "/data/items", "subdomain": "play", "file_ext": "js"},
+    "abilities": {"path": "/data/abilities", "subdomain": "play", "file_ext": "js"},
+    "type_chart": {"path": "/data/typechart", "subdomain": "play", "file_ext": "js"},
+    "aliases": {"path": "/data/aliases", "subdomain": "play", "file_ext": "js"},
 }
 json_file_paths = {
     "pokemon": "pokemon.json",
     "moves": "moves.json",
     "items": "items.json",
+    "abilities": "abilities.json",
+    "aliases": "aliases.json",
 }
 parse_funcs = {"js": save_js, "json": save_json}
 
